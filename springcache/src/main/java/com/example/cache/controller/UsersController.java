@@ -8,16 +8,23 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
-@RequestMapping(value = "/rest/users")
+@RequestMapping(value = "/rest")
 public class UsersController {
 
     @Autowired
     private UsersCache usersCache;
 
-    @GetMapping(value = "{name}")
+    @GetMapping(value = "/users/{name}")
     public Users getUser(@PathVariable String name){
         System.out.println(name);
         return usersCache.getUser(name);
+    }
+
+    @GetMapping(value="/users")
+    public List<Users> getAllUsers(){
+        return usersCache.getAllUsers();
     }
 }
