@@ -3,4 +3,5 @@ include 'springcache'
 include 'spring-https'
 include 'webservices'
 include 'spring-http-https'
+include 'flyway'
 
