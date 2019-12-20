@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
 @EnableCaching
-@EnableJpaRepositories(basePackages = "com.example.cache.com.example.repository")
+@EnableJpaRepositories(basePackages = "com.example.cache.repository")
 public class EhCacheConfiguration {
 
     @Bean
